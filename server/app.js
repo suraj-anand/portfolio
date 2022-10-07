@@ -25,7 +25,15 @@ app.get("/" , (req,res) => {
     res.send("Hello World!")
 })
 
+
+app.get("/test" , (req,res) => {
+    res.send("Backend site made of Express.js")
+})
+
 app.post("/api/userData" , (req,res) => {
+
+    console.log(req.body);
+    
     let newUserData = new userDataModel({
         ...req.body
     })
@@ -81,6 +89,6 @@ app.post("/api/login" , (req,res) => {
     }
 })
 
-app.listen(8000, () => {
+app.listen(process.env.PORT || 8000, () => {
     console.log(`Server is running`)
 })

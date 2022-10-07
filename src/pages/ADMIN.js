@@ -3,6 +3,7 @@ import React from 'react'
 import { useEffect } from 'react';
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
+import Spinner from '../components/Spinner';
 
 function ADMIN() {
 
@@ -24,6 +25,7 @@ function ADMIN() {
     function Login(){
 
         const [ data , setData ] = useState({username:"" , password:""})
+        const [ loading , setLoading ] = useState(false)
         const [ errorMessage , setErrorMessage ] = useState(false)
         // Change
         function handleChange(event){
@@ -38,18 +40,23 @@ function ADMIN() {
 
         // Submit
         function handleSubmit(event){
+            setLoading(true);
+            setErrorMessage(false);
             event.preventDefault();
             console.log(data)
-            axios.post("http://localhost:8000/api/login" , data)
+            axios.post("/api/login" , data)
             .then((res) => {
                 if(res.data.status){
                     setAuth(() => {return true})
                 }
+                setLoading(false);
+                setErrorMessage(false);
             })  
             .catch((err) => {
                 setAuth(() => {return false})
                 console.log(err)
                 setErrorMessage("Invalid Credentials")
+                setLoading(false);
             })
         }
 
@@ -65,14 +72,16 @@ function ADMIN() {
             </div>
                 <div className="row">
                 <div className="flex-item ">
-                    <input onChange={handleChange} type="text" name="username" id="username" className="form-control p-2 w-50 d-flex mx-auto" placeholder="Username" aria-describedby="helpId"    />
+                    <input onChange={handleChange} type="text" name="username" id="username" className="form-control p-2 w-50 d-flex mx-auto" placeholder="Username" aria-describedby="helpId"  autoComplete='off' required  />
                 </div>
                 </div>
                 <div className="row">
                 <div className="flex-item ">
-                    <input onChange={handleChange} type="text" name="password" id="password" className="form-control p-2 w-50 d-flex mx-auto my-4" placeholder="Password" aria-describedby="helpId"  />
+                    <input onChange={handleChange} type="text" name="password" id="password" className="form-control p-2 w-50 d-flex mx-auto my-4" placeholder="Password" aria-describedby="helpId" autoComplete='off' required />
                 </div>
                 </div>
+
+                {loading && <Spinner />}
 
                 <div className="row"><div className="flex-item">
                     {errorMessage && <p className='text-danger my-3 fs-5 text-center'>Invalid Credentials</p>}
@@ -93,14 +102,14 @@ function ADMIN() {
         const [ tableData , setTableData ] = useState([])
         const [ reRender , setReRender ] = useState(false)
         useEffect(() => {
-            axios.get("http://localhost:8000/api/userData")
+            axios.get("/api/userData")
             .then((res) => { setTableData( () => { console.log(res.data); return res.data.data }); })
             .catch((err) => { setTableData(false); console.log('Error on Data Retreival') })
         }, [reRender])
 
         function handleDelete(event){
             let id = (event.currentTarget.id);
-            axios.delete(`http://localhost:8000/api/userData/${id}`)
+            axios.delete(`/api/userData/${id}`)
             .then((res) => { 
                 if(res.data.status) {
                     
@@ -133,7 +142,7 @@ function ADMIN() {
                             <td scope="row">{++index}</td>
                             <td>{row.name}</td>
                             <td>{row.email ? row.email : "-"}</td>
-                            <td>{row.phone ? row.phone : "-"}</td>
+                            <td>{row.number ? row.number : "-"}</td>
                             <td>{row.message ? row.message : "-"}</td>
                             <td><button onClick={handleDelete} id={row._id} className='btn btn-secondary'><i class="fa-solid fa-trash"></i></button></td>
                         </tr> )

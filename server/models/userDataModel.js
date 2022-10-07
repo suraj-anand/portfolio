@@ -11,7 +11,7 @@ const userDataSchema = new Schema({
         type: String,
         required : true
     },
-    phone: {
+    number: {
         type: Number,
     },
     message : {

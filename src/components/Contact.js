@@ -36,7 +36,7 @@ event.currentTarget.classList.remove("text-white");
   function handleSubmit(event){
     event.preventDefault();
     console.log(userData)
-    axios.post("http://localhost:8000/api/userData/" , userData)
+    axios.post("/api/userData/" , userData)
     .then((res) => {
       alert("Thanks~ Your Message has been sent successfully!")
       if(res.data.status){
@@ -110,7 +110,7 @@ event.currentTarget.classList.remove("text-white");
                     </div>
                   </div>
                   <div className="card-body">
-                      <p className="fs-5  text-uppercase my-2">Email</p>
+                      <p className="fs-5 text-uppercase my-2">Email</p>
                       <p className="">suraj02anand@gmail.com</p>
                   </div>
                 </div>
@@ -126,13 +126,13 @@ event.currentTarget.classList.remove("text-white");
             <form onSubmit={handleSubmit} className='p-lg-5'>
           <div className="form-floating mb-3 ">
             <input  onChange={handleChange} value={userData.name} type="text" name="name" id="floatingInput" placeholder='Name' className='form-control my-4 rounded-5 border-0 shadow-md' required  autoComplete='off'/>
-            <label for="floatingInput" className='text-muted'>Name</label>
+            <label for="floatingInput" className='text-muted'>Name <span className='text-danger p-0 m-0'>*</span></label>
           </div>
 
           
           <div className="form-floating mb-3" data-aos="fade-up" data-aos-duration="2000">
-              <input  onChange={handleChange} value={userData.email}  type="text" name="email" id="" placeholder='Email' className='form-control my-4 rounded-5 border-0 shadow-md' required  autoComplete='off'/>
-            <label for="floatingInput" className='text-muted'>Email</label>
+              <input  onChange={handleChange} value={userData.email}  type="email" name="email" id="" placeholder='Email' className='form-control my-4 rounded-5 border-0 shadow-md' required  autoComplete='off'/>
+            <label for="floatingInput" className='text-muted'>Email <span className='text-danger p-0 m-0'>*</span></label>
           </div>
 
           <div className="form-floating mb-3" data-aos="fade-up" data-aos-duration="2000">
