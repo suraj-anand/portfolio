@@ -1,0 +1,11 @@
+.card:hover{
+    padding: 20px;
+}
+
+.h-line-2{
+    width:200px;
+    height: 3px;
+    color: white;
+    background-color: ghostwhite;
+    margin: 0 auto;
+}

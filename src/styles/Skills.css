@@ -1,0 +1,31 @@
+.icon-img{
+    width: 15%;
+    max-width: 300px;
+    max-height: 300px;
+}
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .icon-img{
+        width: 8%;
+    }
+  }
+
+
+.icon-img:hover{
+    transform: scale(1.2);
+}
+
+
+.icon-list-01{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.h-line-1{
+    width:200px;
+    height: 3px;
+    color: white;
+    background-color: aqua;
+    margin: 0 auto;
+}

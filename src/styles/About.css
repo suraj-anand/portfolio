@@ -1,0 +1,7 @@
+.h-line{
+    width:200px;
+    height: 3px;
+    color: white;
+    background-color: violet;
+    margin: 0 auto;
+}
