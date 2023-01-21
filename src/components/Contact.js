@@ -72,7 +72,7 @@ event.currentTarget.classList.remove("text-white");
               <div className="row mt-5 p-2 d-flex align-items-center">
                 <div className="col-lg-4 my-lg-0 my-3 flex-item" >
                     <div data-aos="zoom-in-up">
-                        <div className="card" onMouseOver={toggleOn} onMouseLeave={toggleOff} onMouseOut={toggleOff}>
+                        <div className="card card-hover" onMouseOver={toggleOn} onMouseLeave={toggleOff} onMouseOut={toggleOff}>
                         <div className="card-header my-2 p-3">
                           <div className="rounded-circle border-5">
                             <i class="fa-solid fa-location-dot fa-lg fs-1"></i>

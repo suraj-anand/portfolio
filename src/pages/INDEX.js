@@ -8,6 +8,7 @@ import Skills from '../components/Skills'
 import Temp from '../components/Temp'
 import "../styles/Home.css"
 import Favicon from 'react-favicon'
+import Portfolio from '../components/Portfolio'
 
 function INDEX() {
   return (
@@ -26,6 +27,8 @@ function INDEX() {
       <Skills />
     </div>
       
+      <Portfolio />
+
       <Contact />
 
       {/* <Temp /> */}

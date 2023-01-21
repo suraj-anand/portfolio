@@ -10,18 +10,6 @@ function ADMIN() {
     const [ auth , setAuth ] = useState(false)
     
     
-
-    // useEffect(() => {
-    //     if(auth){
-    //         axios.get("http://localhost:8000/api/userData")
-    //         .then((res) => {
-    //             setTableData(() => { return res.data });
-    //         })
-    //     }
-    // } , [])
-
-
-
     function Login(){
 
         const [ data , setData ] = useState({username:"" , password:""})
@@ -43,9 +31,11 @@ function ADMIN() {
             setLoading(true);
             setErrorMessage(false);
             event.preventDefault();
-            console.log(data)
+            console.log(data);
+            
             axios.post("/api/login" , data)
             .then((res) => {
+                console.log(res);
                 if(res.data.status){
                     setAuth(() => {return true})
                 }
@@ -77,7 +67,7 @@ function ADMIN() {
                 </div>
                 <div className="row">
                 <div className="flex-item ">
-                    <input onChange={handleChange} type="text" name="password" id="password" className="form-control p-2 w-50 d-flex mx-auto my-4" placeholder="Password" aria-describedby="helpId" autoComplete='off' required />
+                    <input onChange={handleChange} type="password" name="password" id="password" className="form-control p-2 w-50 d-flex mx-auto my-4" placeholder="Password" aria-describedby="helpId" autoComplete='off' required />
                 </div>
                 </div>
 
@@ -120,7 +110,7 @@ function ADMIN() {
 
        return ( <>
             {tableData.length !== 0 ? <div class="table-responsive p-2">
-            <p className='text-white p-3 my-3 text-center fs-4'>Table Name</p>
+            <p className='text-white p-3 my-3 text-center fs-4'>Responses</p>
             
             <table class="table table-striped table-hover border-0 table-dark text-light align-middle">
             <thead class="table-secondary">

@@ -17,22 +17,25 @@ return (
             <div class="collapse navbar-collapse" id="collapsibleNavId">
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item mx-2">
-                        <a class="nav-link" href="#home" aria-current="page" onClick={() => {}}>Home <span class="visually-hidden">(current)</span></a>
+                        <a class="nav-link text-center" href="#home" aria-current="page" onClick={() => {}}>Home <span class="visually-hidden">(current)</span></a>
                     </li>
                     <li class="nav-item mx-2">
-                        <a class="nav-link " href="#about" onClick={() => {}}>About</a>
+                        <a class="nav-link text-center" href="#about" onClick={() => {}}>About</a>
                     </li>
                     <li class="nav-ite mx-2">
-                        <a class="nav-link " href="#skills" onClick={() => {}}>Skills</a>
+                        <a class="nav-link text-center" href="#skills" onClick={() => {}}>Skills</a>
                     </li>
                     <li class="nav-item mx-2">
-                        <a class="nav-link " href="#contact" onClick={() => {}}>Contact</a>
+                        <a class="nav-link text-center" href="#portfolio" onClick={() => {}}>Portfolio</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link text-center" href="#contact" onClick={() => {}}>Contact</a>
                     </li>
                 </ul>
                 
                 <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a className='btn btn-outline-success rounded-5' href={require(`../images/G_Resume.pdf`)} download>GET RESUME</a>
+                    <li class="nav-item d-flex d-md-block mt-3 mt-md-0">
+                        <a className='btn btn-outline-success rounded-5 mx-auto' href={require(`../images/Resume.pdf`)} download>GET RESUME</a>
                     </li>
                 </ul>
             </div>

@@ -6,7 +6,7 @@ import { BrowserRouter } from "react-router-dom";
 import axios from "axios";
 
 
-axios.defaults.withCredentials = false;
+axios.defaults.createRoot = true;
 axios.defaults.baseURL = "https://portfolionode-server.herokuapp.com/"
 
 const root = ReactDOM.createRoot(document.getElementById("root"));

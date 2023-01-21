@@ -9,3 +9,31 @@
     /* font-size: 150px; */
     animation: fadeIn 10s;
   }
+
+  .hover13:hover{
+	/* transform: scale(1.2); */
+  }
+
+/* Flashing */
+/* .hover13 figure:hover img {
+  scale: 1.2;
+	opacity: 1;
+	-webkit-animation: flash 1.5s;
+	animation: flash 1.5s;
+}
+@-webkit-keyframes flash {
+	0% {
+		opacity: .4;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@keyframes flash {
+	0% {
+		opacity: .4;
+	}
+	100% {
+		opacity: 1;
+	}
+} */

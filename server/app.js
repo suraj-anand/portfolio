@@ -2,12 +2,15 @@ require("dotenv").config()
 const express = require("express")
 const mongoose = require("mongoose")
 const cors = require("cors")
+const nodemailer = require("nodemailer")
 const app = express()
+
+// Mail Setting
 
 // Middlewares
 app.use(cors({
-    credentials: true,
-    origin: "http://localhost:3000"
+    origin: true,
+    credentials: true    
 }))
 
 app.use(express.json())
@@ -39,6 +42,40 @@ app.post("/api/userData" , (req,res) => {
     })
 
     newUserData.save((err) => {
+
+        const transporter = nodemailer.createTransport({
+            host: "smtp.gmail.com",
+            auth : {
+                user: process.env.gmail_id,
+                pass: process.env.gmail_app_pass,
+    
+            }
+        })
+    
+        transporter.sendMail({
+            from: "suraj02anand@gmail.com",
+            to: req.body.email,
+            subject: "Thanks for Contacting Suraj",
+            html : `
+                    <h3>Hi ${req.body.name}!</h3>
+                    <p>Thanks for filling up the form on my portfolio :)</p>
+                    <p>I'll Get in touch with you soon.</p>
+                    <p>Have a nice day ${req.body.name}.</p>
+                    <p style="color:darkblue">Thanks & Regards</p>
+                    <p style="color:gray">Suraj A</p>
+                `
+        } , (err,info) => {
+            console.log("sending....")
+            if(err){
+                console.log("failed :(")
+                console.log(err)
+            }
+            else{
+                console.log("Sent :)")
+                console.log(info)
+            }
+        })
+
         if(!err){
             console.log(`Saved Successfully`);
             res.status(201).json({status: true})
@@ -87,6 +124,11 @@ app.post("/api/login" , (req,res) => {
         console.log('Invalid Credentials')
         res.status(403).json({status: false})
     }
+})
+
+
+app.get("/api/testMail" , (req,res) => {
+    
 })
 
 app.listen(process.env.PORT || 8000, () => {
