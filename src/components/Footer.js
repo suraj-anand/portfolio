@@ -14,7 +14,7 @@ function Footer() {
             <div className="row">
                 <div className="col-sm-12">
                     <h4  data-aos="flip-up" data-aos-duration="1000">About</h4>
-                    <p data-aos="flip-down" data-aos-duration="1000">I'm a web developer with hands on experience in back end technologies like NodeJS Express MongoDB RDBMS.</p>
+                    <p data-aos="flip-down" data-aos-duration="1000">I'm a GCP 2x Certified Software Engineer / Web developer with hands on experience in back end technologies like Django, NodeJS, Express, MongoDB, RDBMS.</p>
                 </div>
             </div>
             

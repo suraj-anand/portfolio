@@ -12,7 +12,7 @@ function Contact() {
 
   function toggleOff(event){
     event.currentTarget.classList.remove("bg-primary");
-event.currentTarget.classList.remove("text-white");
+    event.currentTarget.classList.remove("text-white");
   }
 
   const [userData,setUserData] = useState({
