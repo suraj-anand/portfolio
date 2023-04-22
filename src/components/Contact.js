@@ -12,7 +12,7 @@ function Contact() {
 
   function toggleOff(event){
     event.currentTarget.classList.remove("bg-primary");
-event.currentTarget.classList.remove("text-white");
+    event.currentTarget.classList.remove("text-white");
   }
 
   const [userData,setUserData] = useState({
@@ -36,22 +36,6 @@ event.currentTarget.classList.remove("text-white");
   function handleSubmit(event){
     event.preventDefault();
     console.log(userData)
-    axios.post("/api/userData/" , userData)
-    .then((res) => {
-      alert("Thanks~ Your Message has been sent successfully!")
-      if(res.data.status){
-        setUserData(() => { return {
-          "name": "",
-          "email": "",
-          "number": "",
-          "message": ""
-        }})
-      }
-    })
-    .catch((err) => {
-      alert("Oops Sorry :) ~ Your Message haven't sent yet!")
-      console.log(err)
-    })
   }
 
   return (
