@@ -1,20 +1,14 @@
-import { Routes, Route, Navigate } from "react-router-dom";
-
+import { Routes, Route } from "react-router-dom";
 import "./styles/App.css"
-import INDEX from "./pages/INDEX";
-import axios from "axios";
-import Favicon from "react-favicon";
-import PAGENOTFOUND from "./pages/PAGENOTFOUND";
-import ADMIN from "./pages/ADMIN";
+import Index from "./pages/Index";
+import PageNotFound from "./pages/PageNotFound";
 
 
 function App() {
-  axios.defaults.withCredentials = true;
   return (
     <Routes>
-      <Route path="/" element={<INDEX />} />
-      <Route path="/admin" element={<ADMIN />} />
-      <Route path="*" element={<PAGENOTFOUND />} />
+      <Route path="/" element={<Index />} />
+      <Route path="*" element={<PageNotFound />} />
     </Routes>
   );
 }

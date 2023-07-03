@@ -8,16 +8,18 @@
     cursor:pointer;
 }
 
-i{
-    padding: 5px;
-    cursor:pointer;
-}
-
 a{
     text-decoration: none;
     color: inherit;
 }
 
-p , h4 , h5 , li , ul{
-    font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+.footer-icons{
+    padding: 5px;
+    cursor:pointer;
+}
+
+.footer-icons:hover{
+    color: #852600fa;
+    filter: contrast(-50%);
+    filter: invert(80%);
 }

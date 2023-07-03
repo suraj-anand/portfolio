@@ -1,3 +1,15 @@
 nav{
     text-transform: uppercase;
 }
+
+.get-resume-btn{
+    border-color: #001C30;
+    color: #DAFFFB;
+    box-shadow: 0px 0px 3px 2px #DAFFFB;
+}
+
+.get-resume-btn:hover{
+    background-color: #176B87;
+    color: #DAFFFB;
+    box-shadow: 0px 0px 10px 6px #176B87;
+}

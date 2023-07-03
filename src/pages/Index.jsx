@@ -1,15 +1,12 @@
 import React from 'react'
-import About from '../components/About'
-import Contact from '../components/Contact'
-import Footer from '../components/Footer'
-import Home from '../components/Home'
-import NavBar from '../components/NavBar'
-import Skills from '../components/Skills'
-import Temp from '../components/Temp'
+
+// Components
+import {About, Certification, Contact, Footer, Home, NavBar, Portfolio, Skills} from '../components'
+
+// Stlyes
 import "../styles/Home.css"
+import "../styles/App.css"
 import Favicon from 'react-favicon'
-import Portfolio from '../components/Portfolio'
-import Certification from '../components/Certification'
 
 function INDEX() {
   return (
@@ -22,20 +19,20 @@ function INDEX() {
 
     <div className="main-bg" style={{background:`url(${require("../images/code-bg.jpg")})` , backgroundRepeat:"no-repeat" , backgroundPosition : "center" , backgroundSize:"cover"}}>
       <About />
-    </div>
+    </div> 
 
     <div className="main-bg" style={{background:`url(${require("../images/skills-bg.jpg")})` , backgroundRepeat:"no-repeat" , backgroundPosition : "center" , backgroundSize:"cover"}}>
       <Skills />
     </div>
       
-      <Certification />
+    <Certification />
 
       <Portfolio />
 
       <Contact />
 
-      {/* <Temp /> */}
-      <Footer />
+      <Footer /> 
+      
     </>
   )
 }

@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+*{
+    font-family: 'Raleway', sans-serif;
+}
+
+p{
+    font-family: 'Raleway', sans-serif !important;
+}
+
+/* Horizontal Lines */
+.h-line{
+    width:200px;
+    height: 3px;
+    color: white;
+    background-color: rgb(181, 150, 255);
+    margin: 0 auto;
+}
+
+
+h-line-1{
+    width:250px;
+    height: 3px;
+    color: white;
+    background-color: gray;
+    margin: 0 auto;
+}
+
+.h-line-2{
+    width:300px;
+    height: 3px;
+    color: white;
+    background-color: ghostwhite;
+    margin: 0 auto;
+}

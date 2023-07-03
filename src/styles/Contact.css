@@ -1,11 +1,9 @@
 .card-hover:hover{
-    padding: 20px;
+    background-color: #969696;
+    color: #FFF;
+    cursor: pointer;
 }
 
-.h-line-2{
-    width:200px;
-    height: 3px;
-    color: white;
-    background-color: ghostwhite;
-    margin: 0 auto;
+.icon{
+    padding: 5px;
 }

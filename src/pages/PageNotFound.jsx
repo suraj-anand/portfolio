@@ -1,6 +1,6 @@
 import React from 'react'
 
-function PAGENOTFOUND() {
+function PageNotFound() {
   return (
     <>
         <div className="d-flex vh-100 align-items-center justify-content-center text-white">
@@ -9,4 +9,4 @@ function PAGENOTFOUND() {
     </>
   )
 }   
-export default PAGENOTFOUND 
+export default PageNotFound 

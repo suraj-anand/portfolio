@@ -8,7 +8,7 @@ function Portfolio() {
     id:1,
     type:"WebApp",
     text:"Online Book Store",
-    img: require('../images/Portfolio.jpg'),
+    img: require('../images/bookstore.png'),
     url:"https://sj-portfolio.netlify.app/"
     },
     {
@@ -25,26 +25,6 @@ function Portfolio() {
       img: require("../images/Student_Portal.jpg"),
       url:"https://quiet-beyond-48389.herokuapp.com/"
     },
-    {
-      id:4,
-      type:"Printable",
-      text:"Buisness Card",
-      img: require(`../images/Buisness_Card_01.jpg`),
-    },
-    {
-      id:4,
-      type:"Printable",
-      text:"Brochure",
-      img: require(`../images/Brouchure.jpg`),
-      description:"Lorem ipsum dolor sit, amet consectetur adipisicing elit."
-    },
-    {
-      id:5,
-      type:"Printable",
-      text:"Formal Invitation",
-      img: require(`../images/Invitation.jpg`),
-      description:"Lorem ipsum dolor sit, amet consectetur adipisicing elit."
-    }
   ]
 
   const [dispData , setDispData] = useState([{}])
@@ -71,7 +51,6 @@ function Portfolio() {
           })
       })
     }
-
   }
 
 
@@ -86,7 +65,6 @@ function Portfolio() {
       }
     }
   
-
     return (                  
       <div className="col-md-4 col-12">
         <div className="card card-hover-1 my-3 text-center mx-auto bg-dark text-white" data-aos="fade-up" style={{width:"270px"}} onClick={handleClick}>
@@ -102,9 +80,8 @@ function Portfolio() {
   }
 
   return (<>
-
     <section id="portfolio">
-        <div className="d-flex min-vh-100 p-3 portfolio">
+        <div className="d-flex min-vh-100 align-items-center portfolio">
             <div className="container-lg">
                 <div className="row">
                   <p className="fs-3 text-center mt-5 text-white">Things That <span className='text-danger'>I've Made</span></p>
@@ -115,18 +92,20 @@ function Portfolio() {
                     <div className='d-flex align-items-center justify-content-center'>
                             <button onClick={filterData} className="btn btn-outline-primary mx-4" value="All">All</button>
                             <button onClick={filterData} className="btn btn-outline-dark mx-4" value="WebApp">Web Apps</button>
-                            <button onClick={filterData} className="btn btn-outline-light mx-4" value="Printable">Printable</button>
+                            <button onClick={filterData} className="btn btn-outline-light mx-4" value="Printable">Docs</button>
                     </div>
                 </div>
 
-                <div className="row mt-5 align-items-center justify-content-center">
+                <div className="row my-5 align-items-center justify-content-center">
                 {dispData.map((singleData , index) => {
-                  console.log(singleData)
                   return (
                     <Card data={singleData} />
                   )
                 })}
                 </div>
+                
+                <p className='fs-4 text-center text-white mt-5'> Stay tuned! A lot more to come here ! </p>
+
             </div>
         </div>
     </section>
