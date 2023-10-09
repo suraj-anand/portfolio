@@ -1,7 +1,8 @@
 # My Professional Portfolio
 
 - #### A Static Webapp used to showcase my skillset, projects I've done and the certifications I've acquired.
-- #### You can access the deployed version from here: [suraj-anand/portfolio/](https://github.com/suraj-anand/portfolio/)
+- #### You can access the deployed version from here: [suraj-anand/portfolio/](https://suraj-anand.github.io/portfolio/)
+- #### You can view the source code from here: [source](https://github.com/suraj-anand/portfolio/)
 
 <br>
 
