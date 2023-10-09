@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/portfolio/static/css/main.34b9a297.css",
+    "main.js": "/portfolio/static/js/main.366561f7.js",
+    "static/media/Self-01.jpg": "/portfolio/static/media/Self-01.3e0c0fe2d54810af1a3b.jpg",
+    "static/media/Student_Portal.jpg": "/portfolio/static/media/Student_Portal.dbb98a0ffe8456e7fd31.jpg",
+    "static/media/bookstore.png": "/portfolio/static/media/bookstore.6b7695f172124de30e65.png",
+    "static/media/code-bg.jpg": "/portfolio/static/media/code-bg.97539b5cd97898f0220e.jpg",
+    "static/media/linux.png": "/portfolio/static/media/linux.b9373807be8c9c788d78.png",
+    "static/media/skills-bg.jpg": "/portfolio/static/media/skills-bg.8fa1080e185386e73ecc.jpg",
+    "static/media/Portfolio.jpg": "/portfolio/static/media/Portfolio.3846bb5b93ad1baf6dcf.jpg",
+    "static/media/Resume.pdf": "/portfolio/static/media/Resume.51553dfbb163a99a7df5.pdf",
+    "static/media/self-02.jpg": "/portfolio/static/media/self-02.4f316e499c4353e5c904.jpg",
+    "static/media/dark-pc.jpg": "/portfolio/static/media/dark-pc.1cf06bb0292591bcd46c.jpg",
+    "static/media/google-cloud.png": "/portfolio/static/media/google-cloud.24257c7d398ab8783468.png",
+    "static/media/nodejs.png": "/portfolio/static/media/nodejs.1a7e4cec88e7ddcabcf5.png",
+    "static/media/js.png": "/portfolio/static/media/js.820c84cfe51d6659df8a.png",
+    "static/media/django.png": "/portfolio/static/media/django.4c399895f677cd3bfbc8.png",
+    "static/media/photoshop.png": "/portfolio/static/media/photoshop.6e051091f57d890bde65.png",
+    "static/media/sql.png": "/portfolio/static/media/sql.5e109e0ac0ed577f843f.png",
+    "static/media/html5.png": "/portfolio/static/media/html5.b40d5a08aa4b2413a2f0.png",
+    "static/media/css3.png": "/portfolio/static/media/css3.3c4c4e7b29ba6f2f22ca.png",
+    "static/media/msoffice.png": "/portfolio/static/media/msoffice.a0f9480cb125f826e9ad.png",
+    "index.html": "/portfolio/index.html",
+    "main.34b9a297.css.map": "/portfolio/static/css/main.34b9a297.css.map",
+    "main.366561f7.js.map": "/portfolio/static/js/main.366561f7.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.34b9a297.css",
+    "static/js/main.366561f7.js"
+  ]
+}
