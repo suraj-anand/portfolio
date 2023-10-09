@@ -1,4 +1,3 @@
-import axios from 'axios';
 import React from 'react'
 import { useState } from 'react';
 import "../styles/Contact.css"
@@ -25,29 +24,36 @@ function Contact() {
   
   function handleSubmit(event){
     event.preventDefault();
-    console.log(userData)
+    setUserData({
+      "name": "",
+      "email": "",
+      "number": "",
+      "message": ""
+    })
     alert("Hey! Apologies, reach out on my phone please, this feature is under development")
   }
 
   return (
-      <div className="container-fluid" id="contact">
-            <div className="my-5 p-5">
-              <h4 data-aos="fade-right" className="fw-bold fs-3 text-white text-center">Contact Me</h4>
-              <div data-aos="fade-left"  data-aos-duration="1000" className='my-0 lh-1 text-primary h-line-2'></div>
-            </div>
+      
+      <div className="container" id="contact">
         <div className="row">
+
+          <div className="my-5">
+            <h4 data-aos="fade-right" className="fw-bold fs-3 text-white text-center">Contact Me</h4>
+            <div className='my-0 text-primary h-line-2 text-center'></div>
+          </div>
+
           <div className="col-lg-6">
             <div className="d-flex mx-auto text-center flex-column">
             
-            <div data-aos="zoom-in-up">
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.143614342114!2d80.25446801523186!3d13.090083315808135!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5265e73ca52363%3A0xa1a2b001199452e3!2sPerumalpet%2C%20Purasaiwakkam%2C%20Chennai%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1665051449489!5m2!1sen!2sin" width="90%" height="90%" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" className='mx-auto'></iframe>
-            </div>
-              {/* Address, Phone, Email Cards */}
+              <div data-aos="zoom-in-up">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.143614342114!2d80.25446801523186!3d13.090083315808135!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5265e73ca52363%3A0xa1a2b001199452e3!2sPerumalpet%2C%20Purasaiwakkam%2C%20Chennai%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1665051449489!5m2!1sen!2sin" width="90%" height="90%" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" className='mx-auto'></iframe>
+              </div>
               
               <div className="row mt-5 p-2 d-flex align-items-center">
                 <div className="col-lg-4 my-lg-0 my-3 flex-item" >
                     <div data-aos="zoom-in-up">
-                        <a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.143614342114!2d80.25446801523186!3d13.090083315808135!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5265e73ca52363%3A0xa1a2b001199452e3!2sPerumalpet%2C%20Purasaiwakkam%2C%20Chennai%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1665051449489!5m2!1sen!2sin">
+                        <a href="https://www.google.com/maps?ll=13.090078,80.256657&z=15&t=m&hl=en&gl=IN&mapclient=embed&q=Perumalpet+Purasaiwakkam+Chennai,+Tamil+Nadu">
                         <div className="card card-hover">
                         <div className="card-header my-2 p-3">
                           <div className="rounded-circle border-5">
@@ -61,7 +67,7 @@ function Contact() {
                       </div>      
                       </a> 
                     </div>
-                 </div>
+                </div>
 
                 <div className="col-lg-4 my-lg-0 my-3 flex-item">
                 <a href="tel:9080819249">
@@ -91,7 +97,7 @@ function Contact() {
                   </div>
                   <div className="card-body">
                       <p className="fs-5 text-uppercase my-2">Email</p>
-                      <p className="">suraj07.anand@gmail.com</p>
+                      <p className="">suraj02anand@gmail.com</p>
                   </div>
                 </div>
                 </a>
@@ -109,7 +115,7 @@ function Contact() {
               <form onSubmit={handleSubmit} className='p-lg-5'>
 
                 <div className="form-floating mb-3 ">
-                  <input  onChange={handleChange} value={userData.name} type="text" name="name" id="floatingInput" placeholder='Name' className='form-control my-4 rounded-5 border-0 shadow-md' required  autoComplete='off'/>
+                  <input onChange={handleChange} value={userData.name} type="text" name="name" id="floatingInput" placeholder='Name' className='form-control my-4 rounded-5 border-0 shadow-md' required  autoComplete='off'/>
                   <label for="floatingInput" className='text-muted'>Name <span className='text-danger p-0 m-0'>*</span></label>
                 </div>
 

@@ -8,6 +8,11 @@ p{
     font-family: 'Raleway', sans-serif !important;
 }
 
+/* Sections */
+.certification{
+    background-color: #001C30 !important;
+}
+
 /* Horizontal Lines */
 .h-line{
     width:200px;

@@ -8,7 +8,7 @@ function About() {
         <div className="about d-flex min-vh-100 text-white align-items-center justify-content-center flex-column">
           <div className="mb-4">
             <p data-aos="fade-right" className='text-center fs-4 mb-0'>About Me</p>
-            <div data-aos="fade-left"  data-aos-duration="1000" className='my-0 text-primary h-line mt-0'></div>
+            <div className='my-0 text-primary h-line mt-0'></div>
           </div>
 
           <div className="container mt-4">

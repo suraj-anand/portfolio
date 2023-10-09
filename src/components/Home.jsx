@@ -3,7 +3,7 @@ import "../styles/Home.css"
 
 function Home() {
 
-    let [spanStyle , setSpanStyle] = useState({color : "#02F2E1"})
+    let [spanStyle , setSpanStyle] = useState({color : "#02F2E1"}) // Color Changer
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -15,8 +15,8 @@ function Home() {
 
     return (
     <>
-        <div className='home'>     
-            <div className="d-flex vh-100 text-white align-items-center" >
+        <div className='home' id="home">     
+            <div className="d-flex min-vh-100 text-white align-items-center">
                 <div className="container-fluid">
 
                     <div className="row" data-aos="zoom-in" data-aos-duration="3000">

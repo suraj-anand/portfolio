@@ -3,7 +3,7 @@ import "../styles/NavBar.css"
 
 function NavBar() {
 
-    let [spanStyle , setSpanStyle] = useState({color : "#02F2E1"})
+    let [spanStyle , setSpanStyle] = useState({color : "#02F2E1"}) // Color Tracker - Changer
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -19,7 +19,7 @@ function NavBar() {
                 <a className="navbar-brand" href="#" style={spanStyle}>
                     &lt;Suraj /&gt;
                 </a>
-                <button className="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+                <button className="navbar-toggler bg-transparent border-0 d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId"
                     aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>

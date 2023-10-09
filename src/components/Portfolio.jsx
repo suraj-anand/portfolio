@@ -1,36 +1,15 @@
 import React from 'react'
 import { useState ,useEffect } from 'react'
 import "../styles/Portfolio.css"
-
+import {PORTFOLIO_DATA} from '../global/constants'
 function Portfolio() {
 
-  const data = [{
-    id:1,
-    type:"WebApp",
-    text:"Online Book Store",
-    img: require('../images/bookstore.png'),
-    url:"https://sj-portfolio.netlify.app/"
-    },
-    {
-    id:2,
-    type: "WebApp",
-    text:"Portfolio",
-    img: require('../images/Portfolio.jpg'),
-    url:"https://sj-portfolio.netlify.app/"
-    },
-    {
-      id:3,
-      type: "WebApp",
-      text:"Student Portal",
-      img: require("../images/Student_Portal.jpg"),
-      url:"https://quiet-beyond-48389.herokuapp.com/"
-    },
-  ]
+  
 
   const [dispData , setDispData] = useState([{}])
 
   useEffect(() => {
-    setDispData(() => {return data;})
+    setDispData(() => {return PORTFOLIO_DATA;})
   }, [])
   
 
@@ -42,11 +21,11 @@ function Portfolio() {
     const type = event.target.value;
     console.log(type)
     if(type==="All"){
-      setDispData(() => {return data});
+      setDispData(() => {return PORTFOLIO_DATA});
     }
     else{
       setDispData(() => {
-          return data.filter((singleData) => {
+          return PORTFOLIO_DATA.filter((singleData) => {
               return singleData.type === type;
           })
       })
@@ -67,7 +46,7 @@ function Portfolio() {
   
     return (                  
       <div className="col-md-4 col-12">
-        <div className="card card-hover-1 my-3 text-center mx-auto bg-dark text-white" data-aos="fade-up" style={{width:"270px"}} onClick={handleClick}>
+        <div className="card card-hover-1 my-3 text-center mx-auto" data-aos="fade-up" style={{width:"270px"}} onClick={handleClick}>
             <div className="card-img-top d-flex p-1">
                 <img className="text-center mx-auto my-auto img-fluid rounded-1" src={props.data.img}  />
             </div>
@@ -104,7 +83,7 @@ function Portfolio() {
                 })}
                 </div>
                 
-                <p className='fs-4 text-center text-white mt-5'> Stay tuned! A lot more to come here ! </p>
+                <p className='fs-4 text-center text-white my-5'> Stay tuned! A lot more to come here ! </p>
 
             </div>
         </div>

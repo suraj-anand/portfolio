@@ -1,7 +1,15 @@
+.card-hover-1{
+	background-color: #99b197;
+	color: #FFF;
+}
+
 .card-hover-1:hover{
     scale: 1.1;   
-    opacity: 10%;
+    opacity: 30%;
+	color: #0D0D0D;
+	background-color: #FDFFAE;
 }
+
 
 .portfolio{
     background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
