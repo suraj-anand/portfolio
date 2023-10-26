@@ -36,7 +36,7 @@ function Footer() {
             
             <p className='text-center my-4 fs-5' data-aos="zoom-in" style={{fontFamily : "ubuntu"}}>Follow Me ----- 
             <div className='d-flex align-items-center justify-content-center my-auto '>
-                    <img src='https://assets.leetcode.com/static_assets/public/icons/favicon-32x32.png' className="mx-3 mb-1 img-fluid footer-icons my-auto"     onClick={() => { window.location.href = "https://leetcode.com/suraj07_anand/"; }}></img>
+                    <img src='https://assets.leetcode.com/static_assets/public/icons/favicon-32x32.png' className="mx-3 mb-1 img-fluid footer-icons my-auto"     onClick={() => { window.location.href = "https://leetcode.com/suraj-anand/"; }}></img>
                     <i data-aos="zoom-in" className="mx-3 footer-icons fa-brands fa-linkedin fa-lg"    onClick={() => { window.location.href = "https://www.linkedin.com/in/suraj-anand-/"; }}></i>
                     <i data-aos="zoom-in" className="mx-3 footer-icons fa-brands fa-instagram fa-lg "  onClick={() => { window.location.href = "https://www.instagram.com/suraj_purushothaman/"; }}></i>
                     <i data-aos="zoom-in" className="mx-3 footer-icons fa-brands fa-github fa-lg "     onClick={() => { window.location.href = "https://github.com/suraj-anand/"; }}></i>
