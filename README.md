@@ -18,4 +18,4 @@
 
 To Create a backend that sends email notification to my email whenever a visitor submits the contact form.
 
-To Keep this up-to-date with the projects that I'm working on and certification with I will acquire.
+To Keep this up-to-date with the projects that I'm working on and certification which I will acquire.
