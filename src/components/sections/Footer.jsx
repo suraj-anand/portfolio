@@ -1,11 +1,4 @@
-import React from 'react'
-import "../styles/Footer.css";
 function Footer() {
-    // Styling
-
-    const addTextColor = (event) => { event.target.classList.add("text-danger") };
-    const removeTextColor = (event) => {event.target.classList.remove("text-danger")};
-
     return (
         <>
         <div data-bs-spy="scroll" data-bs-target="#navbar" data-bs-root-margin="0px 0px" data-bs-smooth-scroll="true" class="scrollspy-example" tabindex="0">
