@@ -1,7 +1,6 @@
-import { useEffect, useState } from 'react'
+import resume from 'assets/Resume.pdf'
 
 function NavBar({ color }) {
-
 
     return (
         <nav className="navbar navbar-expand-md navbar-dark bg-transparent p-4" id="navbar" >
@@ -33,7 +32,7 @@ function NavBar({ color }) {
                     
                     <ul className="navbar-nav">
                         <li className="nav-item d-flex d-md-block mt-3 mt-md-0">
-                            <a className='get-resume-btn btn mx-auto' href={`../assets/Resume.pdf`} download>GET RESUME</a>
+                            <a className='get-resume-btn btn mx-auto' href={resume} download>GET RESUME</a>
                         </li>
                     </ul>
                 </div>
