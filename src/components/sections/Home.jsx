@@ -1,6 +1,19 @@
+import { useEffect } from 'react'
+import Typed from "typed.js"
 import selfImg from 'assets/images/self-01.jpg'
 
 function Home({ color }) {
+    
+    useEffect(() => {
+        const words = "write Code, build Web Applications, Fix Bugs, Solve Problems".split(",");
+        new Typed('.typed', {
+            strings: words,
+            loop: true,
+            typeSpeed: 110,
+            backSpeed: 50,
+            backDelay: 2000
+        });
+    },  [])
 
     return (
         <>
@@ -19,8 +32,8 @@ function Home({ color }) {
                         <h1 className='text-center' data-aos="flip-up" data-aos-duration="1500">Hi there! This is <span style={{color: color}} >Suraj.</span></h1>
                         <div className="row text-center">
                             <div className="col-12 my-2">
-                                <p className='fs-5 fw-bolder text-white' data-aos="zoom-in" data-aos-duration="1500">
-                                    <em>I write Code! | I build Web Applications, Fix Bugs & Solve Problems</em>
+                                <p className='fs-5 fw-bolder text-white fst-italic ' data-aos="zoom-in" data-aos-duration="1500">
+                                    <span>I </span><span className='typed'></span>
                                 </p>
                             </div>
                         </div>
