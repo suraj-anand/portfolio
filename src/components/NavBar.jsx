@@ -1,22 +1,12 @@
-import React, { useEffect, useState } from 'react'
-import "../styles/NavBar.css"
+import { useEffect, useState } from 'react'
 
-function NavBar() {
+function NavBar({ color }) {
 
-    let [spanStyle , setSpanStyle] = useState({color : "#02F2E1"}) // Color Tracker - Changer
-
-    useEffect(() => {
-        const interval = setInterval(() => {
-            let color = Math.floor(Math.random()*16777215).toString(16)
-            setSpanStyle((prev) => { return {"color" : `#${color}`}; });
-        }, 3000);
-        return () => clearInterval(interval);
-    }, [spanStyle])
 
     return (
         <nav className="navbar navbar-expand-md navbar-dark bg-transparent p-4" id="navbar" >
             <div className="container-fluid">
-                <a className="navbar-brand" href="#" style={spanStyle}>
+                <a className="navbar-brand" href="#" style={{color: color}}>
                     &lt;Suraj /&gt;
                 </a>
                 <button className="navbar-toggler bg-transparent border-0 d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId"
@@ -28,25 +18,22 @@ function NavBar() {
                 <div className="collapse navbar-collapse" id="collapsibleNavId">
                     <ul className="navbar-nav mx-auto">
                         <li className="nav-item mx-2">
-                            <a className="nav-link text-center" href="#home" aria-current="page" onClick={() => {}}>Home <span className="visually-hidden">(current)</span></a>
-                        </li>
-                        <li className="nav-item mx-2">
-                            <a className="nav-link text-center" href="#about" onClick={() => {}}>About</a>
+                            <a className="nav-link text-center" href="#about">About</a>
                         </li>
                         <li className="nav-ite mx-2">
-                            <a className="nav-link text-center" href="#skills" onClick={() => {}}>Skills</a>
+                            <a className="nav-link text-center" href="#skills">Skills</a>
                         </li>
                         <li className="nav-item mx-2">
-                            <a className="nav-link text-center" href="#portfolio" onClick={() => {}}>Portfolio</a>
+                            <a className="nav-link text-center" href="#portfolio">Portfolio</a>
                         </li>
                         <li className="nav-item mx-2">
-                            <a className="nav-link text-center" href="#contact" onClick={() => {}}>Contact</a>
+                            <a className="nav-link text-center" href="#contact">Contact</a>
                         </li>
                     </ul>
                     
                     <ul className="navbar-nav">
                         <li className="nav-item d-flex d-md-block mt-3 mt-md-0">
-                            <a className='get-resume-btn btn mx-auto' href={require(`../assets/Resume.pdf`)} download>GET RESUME</a>
+                            <a className='get-resume-btn btn mx-auto' href={`../assets/Resume.pdf`} download>GET RESUME</a>
                         </li>
                     </ul>
                 </div>

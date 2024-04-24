@@ -1,30 +1,30 @@
 {
-  "name": "frontend",
+  "name": "blog-app",
   "version": "0.1.0",
-  "homepage": "https://suraj-anand.github.io/portfolio",
   "private": true,
   "dependencies": {
-    "@reduxjs/toolkit": "^1.8.5",
-    "@testing-library/jest-dom": "^5.16.5",
-    "@testing-library/react": "^13.3.0",
-    "@testing-library/user-event": "^13.5.0",
     "aos": "^2.3.4",
-    "axios": "^0.27.2",
+    "axios": "^1.6.7",
+    "bootstrap": "^5.3.3",
+    "date-fns": "^3.3.1",
+    "dotenv": "^16.0.1",
+    "lodash": "^4.17.21",
+    "prop-types": "^15.8.1",
     "react": "^18.2.0",
+    "react-bootstrap": "^2.10.1",
     "react-dom": "^18.2.0",
-    "react-favicon": "^1.0.1",
-    "react-redux": "^8.0.2",
-    "react-router-dom": "^6.3.0",
-    "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4"
+    "react-icons": "^5.0.1",
+    "react-router-dom": "6.0.2",
+    "react-toastify": "^10.0.4",
+    "typed.js": "^2.1.0"
   },
   "scripts": {
-    "predeploy": "npm run build",
+    "start": "vite",
+    "build": "vite build",
+    "serve": "vite preview",
+    "gh-build": "vite build  --base=/portfolio/",
     "deploy": "gh-pages -d build",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0"
   },
   "eslintConfig": {
     "extends": [
@@ -45,6 +45,16 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^5.0.0"
+    "@vitejs/plugin-react": "^3.1.0",
+    "autoprefixer": "10.4.2",
+    "eslint": "^8.57.0",
+    "eslint-plugin-react": "^7.34.1",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.6",
+    "postcss": "8.4.8",
+    "tailwindcss": "3.0.18",
+    "vite": "^4.1.1",
+    "vite-plugin-eslint": "^1.8.1",
+    "vite-tsconfig-paths": "3.6.0"
   }
 }
