@@ -21,6 +21,7 @@
     "start": "vite",
     "build": "vite build",
     "serve": "vite preview",
+    "gh-build": "vite build  --base=/portfolio/",
     "deploy": "gh-pages -d build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0"
   },
