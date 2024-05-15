@@ -1,22 +1,6 @@
 import { PORTFOLIO_DATA } from 'global/constants'
+
 function Portfolio() {
-
-  function Card({ data: {text, img} }) {
-
-    return (
-      <div className="col-md-4 col-12">
-        <div className="card card-hover-1 my-3 text-center mx-auto"  style={{ width: "270px", height: "220px" }}>
-          <div className="card-img-top d-flex p-1">
-            <img className="text-center mx-auto my-auto img-fluid rounded-1" src={img} style={{ height:"150px", width: "270px", objectFit: "contain" }} />
-          </div>
-          <div className="card-body">
-            <p className='card-text text-center fs- fw-bold'>{text}</p>
-          </div>
-        </div>
-      </div>
-    )
-  }
-
   return (<>
     <section id="portfolio">
       <div className="d-flex min-vh-100 align-items-center portfolio">
@@ -39,6 +23,26 @@ function Portfolio() {
       </div>
     </section>
   </>
+  )
+}
+
+function Card({ data: {text, img, url} }) {
+  
+  function handleCardClick(event){
+    window.location.href = url;
+  }
+
+  return (
+    <div className="col-md-4 col-12" onClick={handleCardClick}>
+      <div className="card card-hover-1 my-3 text-center mx-auto"  style={{ width: "270px", height: "220px" }}>
+        <div className="card-img-top d-flex p-1">
+          <img className="text-center mx-auto my-auto img-fluid rounded-1" src={img} style={{ height:"150px", width: "270px", objectFit: "contain" }} />
+        </div>
+        <div className="card-body">
+          <p className='card-text text-center fs- fw-bold'>{text}</p>
+        </div>
+      </div>
+    </div>
   )
 }
 

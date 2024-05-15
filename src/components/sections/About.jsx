@@ -17,7 +17,7 @@ function About() {
                 <div data-aos="fade-down" className="fs-5"> 
                     <p>Hey Everyone !! </p>
                     <p>
-                      I'm Suraj., computer science graduate and a full-time software engineer. I learn, I write code, and I build software solutions such as web applications, APIs, Python scripts, static websites, and authentication systems. I'm constantly exploring cloud technologies.
+                      I'm Suraj, I'm a computer science graduate and a full-time software engineer. I learn, I write code, and I build software solutions such as web applications, APIs, Python scripts, static websites, and authentication systems. I'm constantly exploring cloud technologies.
                     </p>
                 </div>
                 <div data-aos="fade-up"> <button className='btn btn-lg btn-outline-info rounded-4 mt-5 mx-auto d-flex' onClick={() => { window.location.href = "https://www.linkedin.com/in/suraj-anand-/" }}>Know More</button> </div>
