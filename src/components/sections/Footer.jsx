@@ -38,7 +38,7 @@ function Footer() {
 
             <div className="container" >
                 <div className="row text-center">
-                    <p> Copyright ©{new Date().getFullYear()} | All rights reserved | Made by ~Suraj</p>
+                    <p> Copyright © {new Date().getFullYear()} | All rights reserved | Made by ~Suraj</p>
                 </div>
             </div>
             
