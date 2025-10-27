@@ -126,11 +126,10 @@ h-line-1{
 	background-color: #FDFFAE;
 }
 
-
-.portfolio{
-    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-	background-size: 400% 400%;
-	animation: gradient 15s ease infinite;
+.portfolio {
+    background: linear-gradient(-45deg, #1f1c2c, #928DAB, #434343, #000000);
+    background-size: 400% 400%;
+    animation: gradient 20s ease infinite;
 }
 
 @keyframes gradient {
@@ -199,6 +198,12 @@ h-line-1{
 /*--------------------------------------------------------------
 # Contact
 --------------------------------------------------------------*/
+.contact-wrapper {
+    background: linear-gradient(-45deg, #0f2027, #203a43, #2c5364, #141E30);
+    background-size: 400% 400%;
+    animation: gradient 18s ease infinite;
+}
+
 .contact .info {
   width: 100%;
   background: #fff;

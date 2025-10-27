@@ -6,13 +6,6 @@ import expense_tracker from 'assets/images/portfolio/expense_tracker.png'
 
 export const PORTFOLIO_DATA = [
     {
-        id:1,
-        type:"WebApp",
-        text:"Online Book Store",
-        img: bookstore,
-        url:"https://suraj-anand.github.io/portfolio/"
-    },
-    {
         id:2,
         type: "WebApp",
         text:"Blog Podium",
@@ -31,7 +24,7 @@ export const PORTFOLIO_DATA = [
         type: "WebApp",
         text:"Student Portal",
         img: student_portal,
-        url:"https://quiet-beyond-48389.herokuapp.com/"
+        url:"https://github.com/suraj-anand/student-portal/"
     },
     {
         id:5,

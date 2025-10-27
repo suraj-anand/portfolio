@@ -11,6 +11,7 @@ import mongoLogo from 'assets/images/logo/mongodb-logo.png'
 import postgresLogo from 'assets/images/logo/postgres-logo.png'
 import gcloudLogo from 'assets/images/logo/google-cloud-logo.png'
 import gitLogo from 'assets/images/logo/git-logo.png'
+import awsLogo from 'assets/images/logo/aws-logo.png'
 
 function Skills() {
   return (
@@ -45,6 +46,7 @@ function Skills() {
 
 
                 <div className="icon-list-01" data-aos="flip-down" data-aos-duration="1000">
+                  <img data-toggle="tooltip" data-placement="bottom" title="AWS" src={awsLogo} alt="" className="icon-img  p-2 mx-1" />
                   <img data-toggle="tooltip" data-placement="bottom" title="Google Cloud" src={gcloudLogo} alt="" className="icon-img  p-2 mx-1" />
                   <img data-toggle="tooltip" data-placement="bottom" title="Linux" src={linuxLogo} alt="" className="icon-img  p-2 mx-1" />
                   <img data-toggle="tooltip" data-placement="bottom" title="git" src={gitLogo} alt="" className="icon-img  p-2 mx-1" />

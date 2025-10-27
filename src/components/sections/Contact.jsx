@@ -35,10 +35,9 @@ function Contact() {
   const mapUrl = "https://maps.app.goo.gl/7JL35dnza8Pna2ZR6"
 
   return (
-
+    <div className="contact-wrapper">
     <div className="container contact" id="contact">
       <div className="row">
-
         <div className="my-5">
           <h4 data-aos="fade-right" className="fw-bold fs-3 text-white text-center">Contact Me</h4>
           <div className='my-0 h-line-2 text-center'></div>
@@ -112,6 +111,7 @@ function Contact() {
         </div>
 
       </div>
+    </div>
     </div>
   )
 }
