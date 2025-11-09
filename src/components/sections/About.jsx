@@ -3,8 +3,8 @@ import self from 'assets/images/self-02.jpg'
 function About() {
   return (
     <>
-      <section id="about">
-        <div className="about d-flex min-vh-100 text-white align-items-center justify-content-center flex-column">
+      <section id="self_intro">
+        <div className="self_intro d-flex min-vh-100 text-white align-items-center justify-content-center flex-column">
           <div className="mb-4">
             <p data-aos="fade-right" className='text-center fs-4 mb-0'>About Me</p>
             <div className='my-0 text-primary h-line mt-0'></div>

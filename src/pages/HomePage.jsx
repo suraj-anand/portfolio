@@ -7,6 +7,7 @@ import {
   About, 
   Skills,
   Certification, 
+  Experience,
   LazyBackgroundImage,
   Portfolio, 
   Contact, 
@@ -45,6 +46,8 @@ function HomePage() {
       <LazyBackgroundImage imageUrl={skillsbg}>
         <Skills />
       </LazyBackgroundImage>
+
+      <Experience />
 
       <Certification />
 
