@@ -31,8 +31,8 @@ function NavBar({ color }) {
                     </ul>
                     
                     <ul className="navbar-nav">
-                        <li className="nav-item d-flex d-md-block mt-3 mt-md-0">
-                            <a className='get-resume-btn btn mx-auto' href={resume} download>GET RESUME</a>
+                        <li className="d-flex d-md-block mt-3 mt-md-0">
+                            <a className='get-resume-btn btn mx-auto' href={resume} download>Download Resume</a>
                         </li>
                     </ul>
                 </div>
