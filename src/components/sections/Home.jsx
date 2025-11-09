@@ -3,7 +3,7 @@ import Typed from "typed.js"
 import selfImg from 'assets/images/self-01.jpg'
 
 function Home({ color }) {
-    
+
     useEffect(() => {
         const words = "write Code, build Web Applications, Fix Bugs, Solve Problems".split(",");
         new Typed('.typed', {
@@ -13,7 +13,7 @@ function Home({ color }) {
             backSpeed: 50,
             backDelay: 2000
         });
-    },  [])
+    }, [])
 
     return (
         <>
@@ -29,7 +29,15 @@ function Home({ color }) {
                             </div>
                         </div>
 
-                        <h1 className='text-center' data-aos="flip-up" data-aos-duration="1500">Hi there! This is <span style={{color: color}} >Suraj.</span></h1>
+                        <div className="d-flex flex-column align-items-center justify-content-center">
+                            <h1 className='text-center' data-aos="flip-up" data-aos-duration="1500">
+                                Hi there! I'm <span style={{ color: color }} >Suraj</span>
+                            </h1>
+                            <p>
+                                Software Engineer specializing in Python, AWS, and Automation
+                            </p>
+                        </div>
+
                         <div className="row text-center">
                             <div className="col-12 my-2">
                                 <p className='fs-5 fw-bolder text-white fst-italic ' data-aos="zoom-in" data-aos-duration="1500">
