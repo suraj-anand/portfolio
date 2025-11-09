@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 
 // Components
 import { 
-  Home, 
+  Hero, 
   NavBar, 
   About, 
   Skills,
@@ -35,7 +35,7 @@ function HomePage() {
     <>
       <LazyBackgroundImage imageUrl={darkpc} >
         <NavBar color={color} />
-        <Home color={color} />
+        <Hero color={color} />
       </LazyBackgroundImage>
 
       <LazyBackgroundImage imageUrl={codebg} >
