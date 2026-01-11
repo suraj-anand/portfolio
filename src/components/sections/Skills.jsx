@@ -13,51 +13,57 @@ import gcloudLogo from 'assets/images/logo/google-cloud-logo.png'
 import gitLogo from 'assets/images/logo/git-logo.png'
 import awsLogo from 'assets/images/logo/aws-logo.png'
 
+const skillsData = [
+  { name: 'HTML', logo: htmlLogo, category: 'Frontend' },
+  { name: 'CSS', logo: cssLogo, category: 'Frontend' },
+  { name: 'JavaScript', logo: jsLogo, category: 'Frontend' },
+  { name: 'Bootstrap', logo: bootstrapLogo, category: 'Frontend' },
+  { name: 'React', logo: reactLogo, category: 'Frontend' },
+  { name: 'Python', logo: pythonLogo, category: 'Backend' },
+  { name: 'Django', logo: djangoLogo, category: 'Backend' },
+  { name: 'PostgreSQL', logo: postgresLogo, category: 'Database' },
+  { name: 'MongoDB', logo: mongoLogo, category: 'Database' },
+  { name: 'AWS', logo: awsLogo, category: 'Cloud' },
+  { name: 'Google Cloud', logo: gcloudLogo, category: 'Cloud' },
+  { name: 'Linux', logo: linuxLogo, category: 'DevOps' },
+  { name: 'Git', logo: gitLogo, category: 'DevOps' },
+]
+
 function Skills() {
   return (
-    <>
-      <div className="d-flex vh-100 align-items-center justify-content-center p-4"
-        data-bs-spy="scroll" data-bs-target="#navbar" data-bs-smooth-scroll="true" tabindex="0">
-        <section id="skills">
-          <div className="container text-white">
-
-            <div className="my-4">
-              <p data-aos="fade-right" className='fw-bold fs-3 text-center mb-0'>Skills</p>
-              <div className='my-0 h-line-1'></div>
-            </div>
-
-            <div className="row">
-              <div className="col-12">
-                {/* Skills */}
-                <div className="icon-list-01" data-aos="flip-left" data-aos-duration="1000">
-                  <img src={htmlLogo} alt="html" className="icon-img  p-2 mx-1" data-toggle="tooltip" data-placement="bottom" title="HTML" />
-                  <img src={cssLogo} alt="css" className="icon-img  p-2 mx-1" data-toggle="tooltip" data-placement="bottom" title="CSS" />
-                  <img src={jsLogo} alt="js" className="icon-img  p-1 mx-1" data-toggle="tooltip" data-placement="bottom" title="Javascript" />
-                  <img src={bootstrapLogo} alt="" className="icon-img p-2 mx-1" data-toggle="tooltip" data-placement="bottom" title="Bootstrap" />
-                  <img src={reactLogo} alt="" className="icon-img p-2 mx-1" data-toggle="tooltip" data-placement="bottom" title="ReactJS" />
-                </div>
-
-                <div className="icon-list-01" data-aos="flip-right" data-aos-duration="1000">
-                  <img src={pythonLogo} alt="python" className="icon-img p-1 mx-1" data-toggle="tooltip" data-placement="bottom" title="Python" />
-                  <img src={djangoLogo} alt="django" className="icon-img p-1 mx-1" data-toggle="tooltip" data-placement="bottom" title="Django" />
-                  <img src={postgresLogo} alt="postgres" className="icon-img  mx-1 p-2 " data-toggle="tooltip" data-placement="bottom" title="postgreSQL" />
-                  <img src={mongoLogo} alt="mongo-db" className="icon-img mx-1" data-toggle="tooltip" data-placement="bottom" title="MongoDB" />
-                </div>
-
-
-                <div className="icon-list-01" data-aos="flip-down" data-aos-duration="1000">
-                  <img data-toggle="tooltip" data-placement="bottom" title="AWS" src={awsLogo} alt="" className="icon-img  p-2 mx-1" />
-                  <img data-toggle="tooltip" data-placement="bottom" title="Google Cloud" src={gcloudLogo} alt="" className="icon-img  p-2 mx-1" />
-                  <img data-toggle="tooltip" data-placement="bottom" title="Linux" src={linuxLogo} alt="" className="icon-img  p-2 mx-1" />
-                  <img data-toggle="tooltip" data-placement="bottom" title="git" src={gitLogo} alt="" className="icon-img  p-2 mx-1" />
-                </div>
-
-              </div>
-            </div>
-          </div>
-        </section>
+    <section id="skills" className="skills-section">
+      <div className="skills-background">
+        <div className="gradient-orb orb-1"></div>
+        <div className="gradient-orb orb-2"></div>
+        <div className="gradient-orb orb-3"></div>
       </div>
-    </>
+
+      <div className="container">
+        <div className="section-header" data-aos="fade-up">
+          <h2 className="section-title">
+            <i className="fa fa-code"></i> Skills & Technologies
+          </h2>
+          <div className="title-underline"></div>
+        </div>
+
+        <div className="skills-grid">
+          {skillsData.map((skill, index) => (
+            <div 
+              className="skill-card" 
+              key={index}
+              data-aos="zoom-in"
+              data-aos-delay={index * 50}
+            >
+              <div className="skill-icon">
+                <img src={skill.logo} alt={skill.name} />
+              </div>
+              <h3 className="skill-name">{skill.name}</h3>
+              <span className="skill-category">{skill.category}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
   );
 }
 

@@ -1,46 +1,53 @@
 import { PORTFOLIO_DATA } from 'global/constants'
 
 function Portfolio() {
-  return (<>
-    <section id="portfolio">
-      <div className="d-flex min-vh-100 align-items-center portfolio">
-        <div className="container-lg">
-          <div className="row">
-            <p className="fs-3 text-center mt-5 text-white">Things That <span className='text-danger'>I've Made</span></p>
-          </div>
+  return (
+    <section id="portfolio" className="portfolio-section">
+      <div className="portfolio-background">
+        <div className="gradient-orb orb-1"></div>
+        <div className="gradient-orb orb-2"></div>
+        <div className="gradient-orb orb-3"></div>
+      </div>
 
-          <div className="row my-5 align-items-center justify-content-center">
-            {PORTFOLIO_DATA.map((data, index) => {
-              return (
-                <Card data={data} key={index} />
-              )
-            })}
-          </div>
-
-          <p className='fs-4 text-center text-white my-5'> Stay tuned! A lot more to come here ! </p>
-
+      <div className="container">
+        <div className="section-header" data-aos="fade-up">
+          <h2 className="section-title">
+            Things I've <span className="highlight">Built</span>
+          </h2>
+          <div className="title-underline"></div>
         </div>
+
+        <div className="portfolio-grid">
+          {PORTFOLIO_DATA.map((data, index) => (
+            <Card data={data} key={index} index={index} />
+          ))}
+        </div>
+
+        <p className="coming-soon" data-aos="fade-up">
+          <span className="pulse-dot"></span>
+          Stay tuned! More projects coming soon
+        </p>
       </div>
     </section>
-  </>
   )
 }
 
-function Card({ data: {text, img, url} }) {
-  
-  function handleCardClick(event){
-    window.location.href = url;
-  }
-
+function Card({ data: { text, img, url }, index }) {
   return (
-    <div className="col-md-4 col-12" onClick={handleCardClick}>
-      <div className="card card-hover-1 my-3 text-center mx-auto"  style={{ width: "270px", height: "220px" }}>
-        <div className="card-img-top d-flex p-1">
-          <img className="text-center mx-auto my-auto img-fluid rounded-1" src={img} style={{ height:"150px", width: "270px", objectFit: "contain" }} />
+    <div 
+      className="portfolio-card" 
+      onClick={() => window.open(url, '_blank')}
+      data-aos="fade-up"
+      data-aos-delay={index * 100}
+    >
+      <div className="card-image">
+        <img src={img} alt={text} />
+        <div className="card-overlay">
+          <i className="fa fa-external-link"></i>
         </div>
-        <div className="card-body">
-          <p className='card-text text-center fs- fw-bold'>{text}</p>
-        </div>
+      </div>
+      <div className="card-content">
+        <h3>{text}</h3>
       </div>
     </div>
   )
