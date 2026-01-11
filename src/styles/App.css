@@ -2478,6 +2478,7 @@ html {
     transition: all 0.3s ease;
     display: inline-block;
     position: relative;
+    padding-left: 20px;
 }
 
 .footer-links a::before {
@@ -2579,6 +2580,7 @@ html {
     .footer-content {
         grid-template-columns: 1fr;
         gap: 2rem;
+        text-align: center;
     }
 
     .footer-about h3 {
@@ -2588,6 +2590,18 @@ html {
     .footer-links h4,
     .footer-connect h4 {
         font-size: 1.1rem;
+    }
+
+    .footer-links ul {
+        padding-left: 0;
+    }
+
+    .footer-links a::before {
+        display: none;
+    }
+
+    .footer-links a:hover {
+        transform: none;
     }
 
     .social-links {

@@ -45,13 +45,13 @@ function Experience() {
 
                             <ul className="achievements-list">
                                 <li>
-                                    Collaborated with cross-functional teams to resolve <span className="highlight">100+ catalog issues/month</span>, achieving <span className="highlight">~80% reduction</span> in recurring incidents
+                                    Collaborated with cross-functional teams to provide technical support and resolve <span className="highlight">100+ catalog issues/month</span>, achieving <span className="highlight">~80% reduction</span> in recurring high-priority incidents
                                 </li>
                                 <li>
-                                    <span className="highlight">Integrated AI/ML services</span> and <span className="highlight">AWS</span> into internal tools, reducing manual resolution time by <span className="highlight">~60%</span>
+                                    <span className="highlight">Integrated AI/ML services</span> of <span className="highlight">AWS</span> into internal tools and workflows, to improve operational efficiency and reducing manual resolution time by <span className="highlight">~60%</span>
                                 </li>
                                 <li>
-                                    Performed deep-dive log analysis using <span className="highlight">AWS CloudWatch</span>, identifying root causes of recurring issues
+                                    Performed deep-dive log analysis using <span className="highlight">AWS CloudWatch, Host Logs and metrics</span>, identifying and mitigating root causes of recurring issues
                                 </li>
                                 <li className="awards">
                                     <strong><i className="fa fa-trophy"></i> Achievements:</strong>
