@@ -93,7 +93,7 @@ function Experience() {
 
                             <ul className="achievements-list">
                                 <li>
-                                    <span className="highlight">Designed and developed web applications</span> using <span className="highlight">React and Django</span>, improving client engagement and overall customer satisfaction
+                                    <span className="highlight">Designed and developed web applications</span> using <span className="highlight">React and Django</span>, improving client engagement
                                 </li>
                                 <li>
                                     <span className="highlight">Built Slack bots</span> for high-priority incident notifications, improving issue visibility by <span className="highlight">~85%</span>
