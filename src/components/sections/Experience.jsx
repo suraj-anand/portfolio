@@ -1,89 +1,119 @@
 import React from "react";
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
-// import '../assets/styles/Timeline.scss'
 
 function Experience() {
     return (
-        <div>
-            <div id="experience" className="container text-white">
-                <div className="items-container my-5">
-                    <div className="my-4">
-                        <p data-aos="fade-right" className='fw-bold fs-3 text-center mb-0'>Experience</p>
-                        <div className='my-0 h-line-1'></div>
-                    </div>
-
-                    <VerticalTimeline>
-                        <VerticalTimelineElement
-                            dateClassName="text-white fw-bold"
-                            className="vertical-timeline-element--work"
-                            contentStyle={{ color: 'rgb(39, 40, 34)' }}
-                            contentArrowStyle={{ borderRight: '7px solid white' }}
-                            date="2024 - present"
-                            iconStyle={{ background: '#5000ca', color: 'rgb(39, 40, 34)', display: "flex", alignItems: "center", justifyContent: "center" }}
-                            icon={<i className="fa fa-amazon fa-lg text-white fs-3" />}
-                        >
-                            <h3 className="vertical-timeline-element-subtitle">Amazon</h3>
-                            <h5 className="vertical-timeline-element-title">Application Engineer II</h5>
-                            
-                            <ul className="my-3">
-                                <li>
-                                    Collaborated with cross-functional teams to provide technical support and resolve <b>100+ catalog-related issues per month</b>, achieving <b>~80% reduction</b> in recurring high-priority production incidents
-                                </li>
-
-                                <li>
-                                    <b>Integrated AI/ML-based services</b> and <b>AWS services</b>
-                                    into internal tools and workflows to improve operational efficiency and reducing manual resolution time
-                                    by <b>~60%</b>
-                                </li>
-                                <li>
-                                    <b>Performed deep-dive log analysis</b>
-                                    using <b>AWS CloudWatch, Host Logs and metrics</b>,
-                                    identifying and mitigating root causes of recurring issues.
-                                </li>
-                                <li>
-                                    <b>Achievements</b>:
-                                    <em>Rising Star Award, CSO-2025 Hackathon Winner</em>
-                                </li>
-                            </ul>
-                        </VerticalTimelineElement>
-
-                        <VerticalTimelineElement
-                            dateClassName="fw-bold text-white"
-                            className="vertical-timeline-element--work"
-                            contentStyle={{ color: 'rgb(39, 40, 34)' }}
-                            contentArrowStyle={{ borderRight: '7px solid white' }}
-                            date="2022 - 2024"
-                            iconStyle={{ background: '#5000ca', color: 'rgb(39, 40, 34)', display: "flex", alignItems: "center", justifyContent: "center" }}
-                            icon={<i className="fa fa-computer fa-lg text-white fs-3" />}
-                        >
-                            <h3 className="vertical-timeline-element-subtitle">LTIMindtree</h3>
-                            <h5 className="vertical-timeline-element-title">Software Engineer</h5>
-                            <ul className="my-3">
-                                <li>
-                                    <b>Designed and developed user-friendly web applications</b>
-                                    using <b>React and Django</b>, improving
-                                    client engagement and overall customer satisfaction
-                                </li>
-
-                                <li>
-                                    <b>Built Slack bots</b> to automatically
-                                    notify teams of <b>high-priority data-related incidents</b>, enabling
-                                    faster response times and improving issue visibility by ~85%
-                                </li>
-                                <li>
-                                    <b>Collaborated cross-functionally</b> to identify <b>performance bottlenecks</b> and implement long-term
-                                    fixes, improving the system
-                                </li>
-                                <li>
-                                    <b>Achievements</b>: <em>Rising Star Award, Hi-Fi Award.</em>
-                                </li>
-                            </ul>
-                        </VerticalTimelineElement>
-                    </VerticalTimeline>
-                </div>
+        <section id="experience" className="experience-section">
+            <div className="experience-background">
+                <div className="gradient-orb orb-1"></div>
+                <div className="gradient-orb orb-2"></div>
             </div>
-        </div>
+
+            <div className="container">
+                <div className="section-header" data-aos="fade-up">
+                    <h2 className="section-title">Experience</h2>
+                    <div className="title-underline"></div>
+                </div>
+
+                <VerticalTimeline lineColor="rgba(102, 126, 234, 0.3)">
+                    <VerticalTimelineElement
+                        className="vertical-timeline-element--work"
+                        contentStyle={{
+                            background: 'rgba(255, 255, 255, 0.05)',
+                            backdropFilter: 'blur(10px)',
+                            border: '1px solid rgba(255, 255, 255, 0.1)',
+                            borderRadius: '15px',
+                            boxShadow: '0 8px 32px rgba(0, 0, 0, 0.3)',
+                            color: '#fff'
+                        }}
+                        contentArrowStyle={{ borderRight: '7px solid rgba(255, 255, 255, 0.1)' }}
+                        date="2024 - Present"
+                        dateClassName="timeline-date"
+                        iconStyle={{
+                            background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+                            boxShadow: '0 0 20px rgba(102, 126, 234, 0.5)',
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center'
+                        }}
+                        icon={<i className="fa fa-amazon" />}
+                    >
+                        <div className="timeline-content">
+                            <h3 className="company-name">Amazon</h3>
+                            <h4 className="job-title">Application Engineer II</h4>
+
+                            <ul className="achievements-list">
+                                <li>
+                                    Collaborated with cross-functional teams to provide technical support and resolve <span className="highlight">100+ catalog issues/month</span>, achieving <span className="highlight">~80% reduction</span> in recurring high-priority incidents
+                                </li>
+                                <li>
+                                    <span className="highlight">Integrated AI/ML services</span> of <span className="highlight">AWS</span> into internal tools and workflows, to improve operational efficiency and reducing manual resolution time by <span className="highlight">~60%</span>
+                                </li>
+                                <li>
+                                    Performed deep-dive log analysis using <span className="highlight">AWS CloudWatch, Host Logs and metrics</span>, identifying and mitigating root causes of recurring issues
+                                </li>
+                                <li className="awards">
+                                    <strong><i className="fa fa-trophy"></i> Achievements:</strong>
+                                    <div className="awards-badges">
+                                        <span className="award-badge"><i className="fa fa-star"></i> Extra Miler</span>
+                                        <span className="award-badge"><i className="fa fa-star"></i> Rising Star</span>
+                                        <span className="award-badge"><i className="fa fa-trophy"></i> CSO-2025 Hack-a-thon Winner</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </VerticalTimelineElement>
+
+                    <VerticalTimelineElement
+                        className="vertical-timeline-element--work"
+                        contentStyle={{
+                            background: 'rgba(255, 255, 255, 0.05)',
+                            backdropFilter: 'blur(10px)',
+                            border: '1px solid rgba(255, 255, 255, 0.1)',
+                            borderRadius: '15px',
+                            boxShadow: '0 8px 32px rgba(0, 0, 0, 0.3)',
+                            color: '#fff'
+                        }}
+                        contentArrowStyle={{ borderRight: '7px solid rgba(255, 255, 255, 0.1)' }}
+                        date="2022 - 2024"
+                        dateClassName="timeline-date"
+                        iconStyle={{
+                            background: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)',
+                            boxShadow: '0 0 20px rgba(240, 147, 251, 0.5)',
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center'
+                        }}
+                        icon={<i className="fa fa-laptop-code" />}
+                    >
+                        <div className="timeline-content">
+                            <h3 className="company-name">LTIMindtree</h3>
+                            <h4 className="job-title">Software Engineer</h4>
+
+                            <ul className="achievements-list">
+                                <li>
+                                    <span className="highlight">Designed and developed web applications</span> using <span className="highlight">React and Django</span>, improving client engagement and overall customer satisfaction
+                                </li>
+                                <li>
+                                    <span className="highlight">Built Slack bots</span> for high-priority incident notifications, improving issue visibility by <span className="highlight">~85%</span>
+                                </li>
+                                <li>
+                                    Collaborated cross-functionally to identify <span className="highlight">performance bottlenecks</span> and implement long-term fixes
+                                </li>
+                                <li className="awards">
+                                    <strong><i className="fa fa-trophy"></i> Achievements:</strong>
+                                    <div className="awards-badges">
+                                        <span className="award-badge"><i className="fa fa-star"></i> Rising Star</span>
+                                        <span className="award-badge"><i className="fa fa-award"></i> Hi-Fi Award</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </VerticalTimelineElement>
+                </VerticalTimeline>
+            </div>
+        </section>
     );
 }
 

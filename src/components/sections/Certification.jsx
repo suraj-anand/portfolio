@@ -20,16 +20,24 @@ const data = [
 ]
 
 function CertificationCarousel() {
-
   return (
-    <Carousel>
+    <Carousel className="certification-carousel" indicators={true} controls={true}>
       {
         data.map((e, index) => {
-          const { name, img, url, org } = e;
+          const { name, img } = e;
           return (
-            <Carousel.Item interval={1250} itemID={index} id={index} >
-              <Carousel.Caption >{name}</Carousel.Caption>
-              <img src={img} alt={name} className='img-fluid' />
+            <Carousel.Item interval={3000} key={index}>
+              <div className="cert-card">
+                <div className="cert-image-wrapper">
+                  <img src={img} alt={name} />
+                </div>
+                <div className="cert-badge">
+                  <i className="fa fa-certificate"></i>
+                </div>
+              </div>
+              <Carousel.Caption className="cert-caption">
+                <h3>{name}</h3>
+              </Carousel.Caption>
             </Carousel.Item>
           )
         })
@@ -40,20 +48,25 @@ function CertificationCarousel() {
 
 function Certification() {
     return (
-        <>
-            <div className="d-flex min-vh-100 align-items-center justify-content-center flex-column p-5 certification">
-                <div className="d-flex text-center flex-column mt-5 mb-5" data-aos="fade-down">
-                    <p className='text-white fs-4 mb-0'>
-                      Acquired Certifications
-                    </p>
-                    <div className="h-line-2 mt-0"></div>
+        <section id="certification" className="certification-section">
+            <div className="certification-background">
+                <div className="gradient-orb orb-1"></div>
+                <div className="gradient-orb orb-2"></div>
+            </div>
+
+            <div className="container">
+                <div className="section-header" data-aos="fade-up">
+                    <h2 className="section-title">
+                        <i className="fa fa-award"></i> Certifications
+                    </h2>
+                    <div className="title-underline"></div>
                 </div>
 
-                <div className="my-4 cert-div">
-                  <CertificationCarousel />
+                <div className="carousel-container" data-aos="fade-up" data-aos-delay="200">
+                    <CertificationCarousel />
                 </div>
             </div>
-        </>
+        </section>
     )
 }
 
