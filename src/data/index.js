@@ -1,0 +1,7 @@
+export * from './portfolioData'
+export * from './experienceData'
+export * from './skillsData'
+export * from './certificationsData'
+export * from './aboutData'
+export * from './contactData'
+export * from './navigationData'

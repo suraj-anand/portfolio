@@ -1,17 +1,17 @@
 import { useState, useEffect } from 'react'
 
 // Components
-import { 
-  Hero, 
-  NavBar, 
-  About, 
+import {
+  Hero,
+  NavBar,
+  About,
   Skills,
-  Certification, 
+  Certification,
   Experience,
   LazyBackgroundImage,
-  Portfolio, 
-  Contact, 
-  Footer,   
+  Portfolio,
+  Contact,
+  Footer,
 } from '../components'
 
 // BG-Images
@@ -21,15 +21,15 @@ import skillsbg from 'assets/images/skills-bg.jpg'
 
 function HomePage() {
 
-  let [color , setColor] = useState("#02F2E1") // Color Tracker - Changer
+  let [color, setColor] = useState("#02F2E1") // Color Tracker - Changer
 
   useEffect(() => {
     const interval = setInterval(() => {
-        let color = Math.floor(Math.random()*16777215).toString(16)
-        setColor(() => (`#${color}`));
+      let color = Math.floor(Math.random() * 16777215).toString(16)
+      setColor(() => (`#${color}`));
     }, 3000);
     return () => clearInterval(interval);
-}, [color])
+  }, [color])
 
 
   return (

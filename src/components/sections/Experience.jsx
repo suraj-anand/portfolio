@@ -1,6 +1,11 @@
-import React from "react";
-import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
-import 'react-vertical-timeline-component/style.min.css';
+import React from 'react'
+import {
+    FaCalendarAlt,
+    FaMapMarkerAlt,
+    FaTrophy,
+} from 'react-icons/fa'
+import { EXPERIENCE_DATA } from 'data/experienceData'
+
 
 function Experience() {
     return (
@@ -11,110 +16,130 @@ function Experience() {
             </div>
 
             <div className="container">
+                {/* Modern Section Header */}
                 <div className="section-header" data-aos="fade-up">
-                    <h2 className="section-title">Experience</h2>
+                    <span className="section-eyebrow mono">// CAREER PATH</span>
+                    <h2 className="section-title">Industry Experience</h2>
                     <div className="title-underline"></div>
                 </div>
 
-                <VerticalTimeline lineColor="rgba(102, 126, 234, 0.3)">
-                    <VerticalTimelineElement
-                        className="vertical-timeline-element--work"
-                        contentStyle={{
-                            background: 'rgba(255, 255, 255, 0.05)',
-                            backdropFilter: 'blur(10px)',
-                            border: '1px solid rgba(255, 255, 255, 0.1)',
-                            borderRadius: '15px',
-                            boxShadow: '0 8px 32px rgba(0, 0, 0, 0.3)',
-                            color: '#fff'
-                        }}
-                        contentArrowStyle={{ borderRight: '7px solid rgba(255, 255, 255, 0.1)' }}
-                        date="2024 - Present"
-                        dateClassName="timeline-date"
-                        iconStyle={{
-                            background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-                            boxShadow: '0 0 20px rgba(102, 126, 234, 0.5)',
-                            display: 'flex',
-                            alignItems: 'center',
-                            justifyContent: 'center'
-                        }}
-                        icon={<i className="fa fa-amazon" />}
-                    >
-                        <div className="timeline-content">
-                            <h3 className="company-name">Amazon</h3>
-                            <h4 className="job-title">Application Engineer II</h4>
-
-                            <ul className="achievements-list">
-                                <li>
-                                    Collaborated with cross-functional teams to provide technical support and resolve <span className="highlight">100+ catalog issues/month</span>, achieving <span className="highlight">~80% reduction</span> in recurring high-priority incidents
-                                </li>
-                                <li>
-                                    <span className="highlight">Integrated AI/ML services</span> of <span className="highlight">AWS</span> into internal tools and workflows, to improve operational efficiency and reducing manual resolution time by <span className="highlight">~60%</span>
-                                </li>
-                                <li>
-                                    Performed deep-dive log analysis using <span className="highlight">AWS CloudWatch, Host Logs and metrics</span>, identifying and mitigating root causes of recurring issues
-                                </li>
-                                <li className="awards">
-                                    <strong><i className="fa fa-trophy"></i> Achievements:</strong>
-                                    <div className="awards-badges">
-                                        <span className="award-badge"><i className="fa fa-star"></i> Extra Miler</span>
-                                        <span className="award-badge"><i className="fa fa-star"></i> Rising Star</span>
-                                        <span className="award-badge"><i className="fa fa-trophy"></i> CSO-2025 Hack-a-thon Winner</span>
+                {/* Modern Timeline Container */}
+                <div className="experience-timeline">
+                    {EXPERIENCE_DATA.map((item, index) => {
+                        const IconComponent = item.logoIcon
+                        return (
+                            <div
+                                key={item.id}
+                                className="timeline-block"
+                                data-aos="fade-up"
+                                data-aos-delay={index * 100}
+                            >
+                                {/* Spine Connector & Node Indicator */}
+                                <div className="timeline-rail">
+                                    {index !== 0 && (
+                                        <div className="timeline-rail-line-top"></div>
+                                    )}
+                                    <div
+                                        className="timeline-node"
+                                        style={{ '--node-accent': item.accentColor }}
+                                    >
+                                        <span className="timeline-node-core"></span>
                                     </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </VerticalTimelineElement>
+                                    {index !== EXPERIENCE_DATA.length - 1 && (
+                                        <div className="timeline-rail-line-bottom"></div>
+                                    )}
+                                </div>
 
-                    <VerticalTimelineElement
-                        className="vertical-timeline-element--work"
-                        contentStyle={{
-                            background: 'rgba(255, 255, 255, 0.05)',
-                            backdropFilter: 'blur(10px)',
-                            border: '1px solid rgba(255, 255, 255, 0.1)',
-                            borderRadius: '15px',
-                            boxShadow: '0 8px 32px rgba(0, 0, 0, 0.3)',
-                            color: '#fff'
-                        }}
-                        contentArrowStyle={{ borderRight: '7px solid rgba(255, 255, 255, 0.1)' }}
-                        date="2022 - 2024"
-                        dateClassName="timeline-date"
-                        iconStyle={{
-                            background: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)',
-                            boxShadow: '0 0 20px rgba(240, 147, 251, 0.5)',
-                            display: 'flex',
-                            alignItems: 'center',
-                            justifyContent: 'center'
-                        }}
-                        icon={<i className="fa fa-laptop-code" />}
-                    >
-                        <div className="timeline-content">
-                            <h3 className="company-name">LTIMindtree</h3>
-                            <h4 className="job-title">Software Engineer</h4>
+                                {/* Experience Glass Capsule Card */}
+                                <div className="timeline-card-wrapper">
+                                    <div className="experience-glass-card">
+                                        {/* Card Header */}
+                                        <div className="exp-card-header">
+                                            <div className="exp-brand-cluster">
+                                                <div className="exp-logo-box">
+                                                    {item.logoType === 'image' ? (
+                                                        <img
+                                                            src={item.logoSrc}
+                                                            alt={`${item.company} logo`}
+                                                            className={`exp-company-img ${item.id}-logo`}
+                                                            loading="lazy"
+                                                        />
+                                                    ) : (
+                                                        <IconComponent className="exp-company-icon" />
+                                                    )}
+                                                </div>
 
-                            <ul className="achievements-list">
-                                <li>
-                                    <span className="highlight">Designed and developed web applications</span> using <span className="highlight">React and Django</span>, improving client engagement
-                                </li>
-                                <li>
-                                    <span className="highlight">Built Slack bots</span> for high-priority incident notifications, improving issue visibility by <span className="highlight">~85%</span>
-                                </li>
-                                <li>
-                                    Collaborated cross-functionally to identify <span className="highlight">performance bottlenecks</span> and implement long-term fixes
-                                </li>
-                                <li className="awards">
-                                    <strong><i className="fa fa-trophy"></i> Achievements:</strong>
-                                    <div className="awards-badges">
-                                        <span className="award-badge"><i className="fa fa-star"></i> Rising Star</span>
-                                        <span className="award-badge"><i className="fa fa-award"></i> Hi-Fi Award</span>
+                                                <div className="exp-title-details">
+                                                    <div className="exp-company-row">
+                                                        <h3 className="exp-company-name">{item.company}</h3>
+                                                    </div>
+                                                    <h4 className="exp-role-title">{item.role}</h4>
+                                                </div>
+                                            </div>
+
+                                            {/* Tenure & Location Capsule */}
+                                            <div className="exp-meta-cluster">
+                                                <div className="exp-date-pill mono">
+                                                    <FaCalendarAlt className="meta-icon" />
+                                                    <span>{item.period}</span>
+                                                </div>
+                                                <div className="exp-location-pill mono">
+                                                    <FaMapMarkerAlt className="meta-icon" />
+                                                    <span>{item.location}</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        {/* Achievement Bullets */}
+                                        <ul className="exp-bullets-list">
+                                            {item.bullets.map((bullet, bIdx) => (
+                                                <li key={bIdx} className="exp-bullet-item">
+                                                    <span className="bullet-indicator">▹</span>
+                                                    <span className="bullet-text">{bullet}</span>
+                                                </li>
+                                            ))}
+                                        </ul>
+
+                                        {/* Awards Row (if present) */}
+                                        {item.awards.length > 0 && (
+                                            <div className="exp-awards-strip">
+                                                <div className="exp-awards-label mono">
+                                                    <FaTrophy className="awards-lead-icon" />
+                                                    <span>HONORS:</span>
+                                                </div>
+                                                <div className="exp-awards-tags">
+                                                    {item.awards.map((award, aIdx) => {
+                                                        const AwardIcon = award.icon
+                                                        return (
+                                                            <div key={aIdx} className="exp-award-pill">
+                                                                <AwardIcon className="award-icon" />
+                                                                <span>{award.title}</span>
+                                                            </div>
+                                                        )
+                                                    })}
+                                                </div>
+                                            </div>
+                                        )}
+
+                                        {/* Tech Stack Tags */}
+                                        <div className="exp-tech-footer">
+                                            <div className="exp-tags-wrapper">
+                                                {item.technologies.map((tech, tIdx) => (
+                                                    <span key={tIdx} className="exp-tech-tag mono">
+                                                        {tech}
+                                                    </span>
+                                                ))}
+                                            </div>
+                                        </div>
                                     </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </VerticalTimelineElement>
-                </VerticalTimeline>
+                                </div>
+                            </div>
+                        )
+                    })}
+                </div>
             </div>
         </section>
-    );
+    )
 }
 
-export default Experience;
+export default Experience

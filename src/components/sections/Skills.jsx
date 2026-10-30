@@ -1,70 +1,78 @@
-// Logos
-import htmlLogo from 'assets/images/logo/html-logo.png'
-import cssLogo from 'assets/images/logo/css-logo.png'
-import jsLogo from 'assets/images/logo/js-logo.png'
-import bootstrapLogo from 'assets/images/logo/Bootstrap_logo.png'
-import reactLogo from 'assets/images/logo/react-logo.png'
-import pythonLogo from 'assets/images/logo/python-logo.png'
-import djangoLogo from 'assets/images/logo/django-logo.png'
-import linuxLogo from 'assets/images/logo/linux-logo.png'
-import mongoLogo from 'assets/images/logo/mongodb-logo.png'
-import postgresLogo from 'assets/images/logo/postgres-logo.png'
-import gcloudLogo from 'assets/images/logo/google-cloud-logo.png'
-import gitLogo from 'assets/images/logo/git-logo.png'
-import awsLogo from 'assets/images/logo/aws-logo.png'
+import { useState, useMemo } from 'react'
+import { ALL_SKILLS, CATEGORY_TABS } from 'data/skillsData'
 
-const skillsData = [
-  { name: 'HTML', logo: htmlLogo, category: 'Frontend' },
-  { name: 'CSS', logo: cssLogo, category: 'Frontend' },
-  { name: 'JavaScript', logo: jsLogo, category: 'Frontend' },
-  { name: 'Bootstrap', logo: bootstrapLogo, category: 'Frontend' },
-  { name: 'React', logo: reactLogo, category: 'Frontend' },
-  { name: 'Python', logo: pythonLogo, category: 'Backend' },
-  { name: 'Django', logo: djangoLogo, category: 'Backend' },
-  { name: 'PostgreSQL', logo: postgresLogo, category: 'Database' },
-  { name: 'MongoDB', logo: mongoLogo, category: 'Database' },
-  { name: 'AWS', logo: awsLogo, category: 'Cloud' },
-  { name: 'Google Cloud', logo: gcloudLogo, category: 'Cloud' },
-  { name: 'Linux', logo: linuxLogo, category: 'DevOps' },
-  { name: 'Git', logo: gitLogo, category: 'DevOps' },
-]
 
 function Skills() {
+  const [activeCategory, setActiveCategory] = useState('all')
+
+  const filteredSkills = useMemo(() => {
+    if (activeCategory === 'all') return ALL_SKILLS
+    return ALL_SKILLS.filter(skill => skill.group === activeCategory)
+  }, [activeCategory])
+
   return (
     <section id="skills" className="skills-section">
       <div className="skills-background">
         <div className="gradient-orb orb-1"></div>
         <div className="gradient-orb orb-2"></div>
-        <div className="gradient-orb orb-3"></div>
       </div>
 
       <div className="container">
+        {/* Modern Section Header */}
         <div className="section-header" data-aos="fade-up">
-          <h2 className="section-title">
-            <i className="fa fa-code"></i> Skills & Technologies
-          </h2>
+          <span className="section-eyebrow mono">// TECHNICAL CAPABILITIES</span>
+          <h2 className="section-title">Core Skills & Tech Stack</h2>
           <div className="title-underline"></div>
         </div>
 
-        <div className="skills-grid">
-          {skillsData.map((skill, index) => (
-            <div 
-              className="skill-card" 
-              key={index}
-              data-aos="zoom-in"
-              data-aos-delay={index * 50}
+        {/* Category Filters Bar */}
+        <div className="skills-filter-nav" data-aos="fade-up" data-aos-delay="100">
+          <div className="skills-pills-bar">
+            {CATEGORY_TABS.map((tab) => {
+              const count = tab.id === 'all'
+                ? ALL_SKILLS.length
+                : ALL_SKILLS.filter(s => s.group === tab.id).length
+              const isActive = activeCategory === tab.id
+
+              return (
+                <button
+                  key={tab.id}
+                  type="button"
+                  className={`skills-filter-btn ${isActive ? 'is-active' : ''}`}
+                  onClick={() => setActiveCategory(tab.id)}
+                >
+                  <span>{tab.label}</span>
+                  <span className="filter-count mono">{count}</span>
+                </button>
+              )
+            })}
+          </div>
+        </div>
+
+        {/* Modern Glass Skill Grid */}
+        <div className="skills-modern-grid">
+          {filteredSkills.map((skill, index) => (
+            <div
+              className={`skill-glass-card ${skill.highlight ? 'is-highlight' : ''}`}
+              key={skill.name}
+              data-aos="fade-up"
+              data-aos-delay={(index % 6) * 60}
             >
-              <div className="skill-icon">
-                <img src={skill.logo} alt={skill.name} />
+              <div className="skill-logo-frame">
+                <img src={skill.logo} alt={`${skill.name} logo`} className="skill-logo-img" loading="lazy" />
               </div>
-              <h3 className="skill-name">{skill.name}</h3>
-              <span className="skill-category">{skill.category}</span>
+
+              <div className="skill-meta">
+                <h3 className="skill-name">{skill.name}</h3>
+                <span className="skill-category-pill mono">{skill.category}</span>
+              </div>
             </div>
           ))}
         </div>
+
       </div>
     </section>
-  );
+  )
 }
 
-export default Skills;
+export default Skills
